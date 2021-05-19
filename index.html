@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Learning Management System</title>
-	<link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Learning Management System</title>
 </head>
 <body>
-	<div class="container">
-		<h1>Welcome To Learning Management System</h1>
-		<hr>
-		<form>
-			<label for="student">Click Here to Login as a Student:</label>
-			<button id="student"><a href="studentLogin.html">Student Login</a></button>
-			<br><br>
-			<label for="student">Click Here to Login as a Teacher:</label>
-			<button id="teacher"><a href="teacherLogin.html">Teacher Login</a></button>
-			<br><br>
-			<label for="student">Click Here to Login as a Admin:</label>
-			<button id="admin"><a href="adminLogin.html">Admin Login</a></button>
-		</form>
-	</div>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Learning Management System</h2>
+            <div class="toggle"></div>
+        </header>
+
+		<video src="video.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Never Stop</h2>
+            <h3>Learning New Things</h3>
+            <p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." - Malcolm X</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="adminLogin.html">Admin</a></li>
+            <li><a href="studentLogin.html">Student</a></li>
+            <li><a href="teacherLogin.html">Teacher</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>
