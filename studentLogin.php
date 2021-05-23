@@ -16,6 +16,7 @@
       $data=mysqli_fetch_array($result);
       $_SESSION['name']=$data[3];
       $_SESSION['id']=$data[0];
+      $_SESSION['yd_id']=$data[4];
       header('location:studentDashboard.php');
       
     }

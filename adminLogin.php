@@ -11,8 +11,11 @@
     $sql = "select * from adminLogin where userId='$uname' AND password='$password' limit 1";
     $result = mysqli_query($con,$sql);
     if(mysqli_num_rows($result)==1){
-      echo "You Have Succesfully Logged In";
-      exit();
+      //echo "You Have Succesfully Logged In";
+      $data=mysqli_fetch_array($result);
+      $_SESSION['name']=$data[3];
+      $_SESSION['id']=$data[0];
+      header('location:adminDashboard.php');
     }
     else{
       echo "You Have Entered Incorrect Password";

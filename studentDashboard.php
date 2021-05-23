@@ -27,13 +27,21 @@ $array=array();
         <h1><?php
             echo "Welcome $name";
         ?></h1>
-        <form action="">
+        <hr>
+        
         <?php
             while($row = mysqli_fetch_array($result)){
-                echo "<button>$row[1]</button><br><br>";
+        ?>
+        <form action="classroom.php" method="post">
+        <input type="hidden" name="subject_id" value="<?php echo "$row[0]"; ?>">
+        <input type="submit" name="subjectName" value="<?php  echo"$row[1]"; ?>"><br><br>
+        
+        </form>
+        <?php
             }
         ?>
-        </form>
+        <button><a href="classes.php">Join Classes</a></button>
+        
     </div>
 </body>
 </html>
